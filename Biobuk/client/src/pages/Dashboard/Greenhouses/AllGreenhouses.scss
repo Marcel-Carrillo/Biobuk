@@ -1,0 +1,41 @@
+.allGreenhouses {
+  h1 {
+    font-family: "BarlowBold";
+    font-size: 50px;
+    color: #ef961c;
+    text-shadow: 1px 1px 3px rgb(26, 26, 26);
+  }
+  .card {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ef961c;
+  }
+  button {
+    width: fit-content;
+    margin: 20px auto;
+  }
+  .col-12 {
+    padding: 5px;
+  }
+}
+.allGreenhouses::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../../public/images/background.jpg");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.allGreenhouses::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.768);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

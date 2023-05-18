@@ -1,0 +1,23 @@
+.confirmPurchase {
+  h1 {
+    font-family: "BarlowBold";
+    font-size: 50px;
+    color: #ef961c;
+    text-shadow: 1px 1px 3px rgb(26, 26, 26);
+  }
+  .receipt {
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 1px;
+  }
+
+  .colBotones {
+    display: flex;
+    justify-content: end;
+    margin-right: 16vw;
+    margin-top: 20px;
+  }
+  .direccion{
+    text-align: right;
+  }
+}

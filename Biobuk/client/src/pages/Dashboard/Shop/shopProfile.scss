@@ -1,0 +1,104 @@
+.shopProfile {
+  .pPal {
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    border: 5px solid #f4a614;
+    border-radius: 20px;
+  }
+  .btn-fix {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+
+    margin-left: 17px;
+    top: 0;
+    z-index: 1;
+  }
+
+  .info {
+    margin-top: 20px;
+    margin-left: 10vw;
+  }
+
+  .img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    box-shadow: 10px 5px 5px black;
+    margin: 30px;
+  }
+
+  .bienvenido {
+    color: #54a4b4;
+    font-size: 30px;
+    margin-right: 20px;
+  }
+
+  .nombrePro {
+    color: #f4a614;
+    font-weight: bolder;
+    font-size: 50px;
+  }
+
+  .card-shopProfile {
+    min-height: 0px;
+    padding: 30px;
+    background-image: url("../../../../public/shop-background.jpg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.52);
+    transform: scale(1);
+    transition-duration: 500ms;
+
+    cursor: pointer;
+    h3 {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      width: fit-content;
+      padding: 15px;
+    }
+  }
+  .card-shopProfile:hover {
+    filter: contrast(0.9) brightness(1.1);
+    transform: scale(0.9);
+  }
+
+  // .farmer-profile {
+  //   width: 70%;
+  // }
+
+  @media (max-width: 391px) {
+    .img {
+      height: 275px;
+      width: 275px;
+      border-radius: 50%;
+      box-shadow: 10px 5px 5px black;
+    }
+    // .farmer-profile {
+    //   width: 100%;
+    // }
+  }
+}
+.shopProfile::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../../public/images/lista-compra.jpg") !important;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.shopProfile::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.637);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

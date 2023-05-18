@@ -1,0 +1,31 @@
+.formlogin {
+  justify-content: center;
+  text-align: left;
+  height: 100%;
+  align-items: center;
+  font-size: 1.5rem;
+  .formulario {
+    border: 5px solid #f4a614;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+}
+.formlogin::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../public/images/background.jpg");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+@media (min-width: 100px) and (max-width: 750px) {
+  .formulario {
+    margin: 45px 0;
+  }
+}

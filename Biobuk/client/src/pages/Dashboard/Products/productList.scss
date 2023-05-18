@@ -1,0 +1,69 @@
+.productList {
+  h1 {
+    font-family: "BarlowBold";
+    font-size: 50px;
+    padding-bottom: 30px;
+    color: #ef961c;
+    text-shadow: 1px 1px 3px rgb(26, 26, 26);
+  }
+  .product-card {
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgb(26, 26, 26);
+    padding-bottom: 10px;
+  }
+  .product-card:hover {
+    border: 1px solid #ef961c;
+    color: #ef961c;
+    box-shadow: 1px 1px 3px #ef961c;
+  }
+  .shift {
+    width: 0;
+    height: 0;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top:60px;
+  }
+  .next {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 30px solid orange;
+    left:50px;
+  }
+  .next:active {
+    border-left: 30px solid #749cb8aa;
+  }
+  .previous {
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 30px solid orange;
+  }
+  .previous:active {
+    border-right: 30px solid #749cb8aa;
+  }
+}
+.productList::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../../public/images/productList.jpg");
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.productList::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.637);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+  
+// <a href="https://www.freepik.es/foto-gratis/primer-biologo-rociando-flores-macetas-fertilizantes-nutricionales-vivero-plantas_25624127.htm#query=productos%20fitosanitarios&position=0&from_view=search&track=ais">Imagen de Drazen Zigic</a> en Freepik

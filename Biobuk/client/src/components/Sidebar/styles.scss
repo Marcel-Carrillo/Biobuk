@@ -1,0 +1,89 @@
+.sidebar {
+  font-size: 2rem;
+  width: 250px;
+  min-height: 98%;
+  margin: 10px 0;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.762) !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.309);
+  z-index: 3;
+  border-radius: 20px;
+  font-size: 24px;
+  position: absolute;
+  img{
+    margin-right: 10px;
+    height: 30px;
+  }
+  a:hover{
+    img{
+      animation: tilt 0.5s;
+      filter: invert(1);
+    }
+  }
+  a {
+    color: black;
+  }
+  
+  a:hover {
+    background: rgb(240, 154, 25);
+    background: linear-gradient(
+      93deg,
+      rgba(240, 154, 25, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    color: white;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+}
+.nav-item {
+  margin-bottom: 20px;
+}
+.aparecer {
+  animation: aparecer 500ms;
+}
+.nav{
+  --bs-nav-link-color: rgb(240, 154, 25);
+  --bs-nav-link-hover-color: rgb(240, 154, 25);
+}
+
+@keyframes aparecer {
+  from {
+    transform: translateX(-250px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0vw);
+    opacity: 100%;
+  }
+}
+@keyframes volver {
+  from {
+    transform: translateX(250px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes tilt {
+  0%{
+    transform: rotate(-10deg);
+  }
+  50%{
+    transform: rotate(10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width : 576px){
+  .sidebar{
+    position: absolute;
+    width: 100vw;
+  }
+}

@@ -1,0 +1,50 @@
+.orderlist {
+  h1 {
+    font-size: 50px !important;
+    font-family: "BarlowExtraBold";
+    color: #ef961c;
+    text-shadow: 1px 1px 3px rgb(26, 26, 26);
+  }
+  .pedido:nth-child(even) {
+    background-color: rgba(116, 156, 184, 0.2);
+  }
+  .pedido:nth-child(odd) {
+    border: 5px solid rgba(116, 156, 184, 0.2);
+  }
+  .rowPedido {
+    gap: 20px;
+    justify-content: center;
+  }
+  table {
+    width: 100%;
+  }
+  h4:nth-child(2){
+    padding-left: 5%;
+  }
+  td,
+  th {
+    text-align: center;
+    width: 25%;
+  }
+  .botonPerfil {
+    display: flex;
+    justify-content: end;
+    height: 35px;
+    width: 95px;
+  }
+  .pedido {
+    padding: 20px;
+    border-radius: 25px;
+    min-height: 150px;
+    overflow-y: scroll;
+    transition-duration: 200ms;
+  }
+  .pedido:hover {
+    border-color: transparent;
+    background-color: rgba(239, 151, 28, 0.3);
+    cursor: pointer;
+  }
+  .pedido::-webkit-scrollbar {
+    display: none;
+  }
+}

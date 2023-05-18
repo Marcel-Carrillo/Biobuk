@@ -1,0 +1,287 @@
+.farmer-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .btn-fix {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  .farmer-name {
+    // margin-bottom: 70px;
+    span {
+      font-size: 30px !important;
+      color: rgb(70, 70, 70);
+      font-weight: 500;
+      text-shadow: 0px 0px 0px rgb(26, 26, 26);
+    }
+    h1 {
+      font-size: 50px !important;
+      font-family: "BarlowExtraBold";
+      color: #ef961c;
+      text-shadow: 1px 1px 3px rgb(26, 26, 26);
+    }
+  }
+  .profile {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    border: 2px solid #54a4b4;
+    padding: 20px;
+    .profile-img {
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        min-width: 250px;
+        min-height: 250px;
+        max-height: 300px;
+        max-width: 300px;
+        width: 20vw;
+        height: 20vw;
+        border-radius: 50%;
+        object-fit: contain;
+        object-position: center;
+        box-shadow: 0 0 10px grey;
+      }
+    }
+    .farmer-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 25px;
+    }
+
+    @media (max-width: 992px) {
+      .farmer-info {
+        text-align: center;
+      }
+    }
+  }
+  .farmer-greenhouses {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.05);
+  }
+  .farmer-greenhouses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .container2 {
+    background: transparent;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .card2 {
+    position: relative;
+    z-index: 2;
+    font-size: 34px;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    transition: all ease 0.3s;
+  }
+
+  .container2::after,
+  .container2::before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s linear;
+  }
+
+  .container2::after {
+    top: -20px;
+    left: -20px;
+    background-color: rgba(125, 214, 66, 0.603);
+    animation: animFirst 5s linear infinite;
+  }
+
+  .container2::before {
+    background-color: rgb(226, 223, 54);
+    top: 70%;
+    left: 70%;
+    animation: animSecond 5s linear infinite;
+    animation-delay: 3s;
+  }
+
+  .container2:hover {
+    box-shadow: 0px 0px 10px rgba(0, 77, 32, 0.432);
+  }
+
+  .container2:hover::after {
+    left: 80%;
+    transform: scale(1.2);
+  }
+
+  .container2:hover::before {
+    left: -10px;
+    transform: scale(1.2);
+  }
+  .cardFarmerGreenhouse {
+    padding: 35px;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px black, 2px 2px 0px black;
+    // box-shadow: 0px 0px 5px #ef961c;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    color: white;
+    font-weight: bold;
+    transform: scale(1);
+    transition-duration: 500ms;
+  }
+  .cardFarmerGreenhouse {
+    padding: 40px;
+    min-height: 100%;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px black, 2px 2px 0px black;
+    box-shadow: 0px 0px 5px #ef961c;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    color: white;
+    font-weight: bold;
+    transform: scale(1);
+    transition-duration: 500ms;
+  }
+  .cardFarmerGreenhouse::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../../../../public/images/farmers.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    filter: blur(1px) saturate(0.5);
+  }
+  .cardFarmerGreenhouse::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // background-color: rgba(0, 0, 0, 0.351);
+    background-size: cover;
+    border-radius: 20px;
+    z-index: 0;
+    filter: blur(1px) saturate(0.5);
+  }
+
+  .cardFarmerGreenhouse:hover {
+    background-color: #54a4b4 !important;
+    border: 1px solid white;
+    color: #ef961c;
+    // filter: contrast(0.9) brightness(1.1);
+    transform: scale(0.9);
+  }
+  .cardFarmerGreenhouse:active {
+    background-color: #ef961c !important;
+  }
+  .cardPedidos::before {
+    background-image: url("../../../../public/images/pedidos.jpg");
+  }
+  // <a href="https://www.freepik.es/foto-gratis/mudarse-casa-cajas-carton_7220964.htm#query=boxes&position=11&from_view=search&track=sph">Imagen de Racool_studio</a> en Freepik
+
+  .cardProducts::before {
+    background-image: url("../../../../public/images/producto.jpg");
+    background-position-y: 40%;
+  }
+
+  // <a href="https://www.freepik.es/foto-gratis/investigador-laboratorio-que-cria-nuevos-tipos-vegetacion_10229142.htm#query=productos%20fitosanitarios&position=14&from_view=search&track=ais">Imagen de wayhomestudio</a> en Freepik
+
+  .invernaderos-circle {
+    // position: absolute;
+    transition-duration: 500ms;
+    cursor: pointer;
+    background: url("../../../../public/images/farmers.jpg");
+    background-position: center;
+    background-size: cover;
+    min-width: 250px;
+    min-height: 250px;
+    max-height: 300px;
+    max-width: 300px;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: center;
+    // box-shadow: 0 0 10px 5px #ef961c;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black, 2px 2px 0px black;
+  }
+  .invernaderos-circle:hover {
+    transform: scale(0.9);
+    transition-duration: 500ms;
+    color: #ef961c;
+  }
+}
+
+@media (max-width: 391px) {
+  .profile-img {
+    img {
+      height: 250px !important;
+      width: 250px !important;
+    }
+  }
+  // .botonEditar {
+  //   text-align: center;
+  //   margin-bottom: 20px;
+  // }
+  .farmer-name {
+    // margin-bottom: 10px !important;
+    display: flex;
+    gap: 10px;
+  }
+}
+.farmer-profile::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../../public/images/cerrar-imagen-mano-sosteniendo-plantacion-semilla-planta.jpg");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.farmer-profile::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.637);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

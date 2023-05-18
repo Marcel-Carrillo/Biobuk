@@ -1,0 +1,113 @@
+body {
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  .error {
+    text-align: center;
+    text-shadow: 3px 3px 10px rgb(33, 33, 33);
+    background-color: rgba(250, 235, 215, 0.505);
+    color: rgb(19, 19, 19);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    padding: 50px;
+    border: 2px solid #ef961c;
+    .error-title {
+      h1 {
+        font-size: 100px !important;
+        font-family: "BarlowExtraBold";
+      }
+      color: #ef961c;
+    }
+    .sub-error {
+      h2 {
+        font-size: 50px !important;
+      }
+    }
+    .error-home {
+      padding: 20px;
+      span {
+        color: white;
+        border: 2px solid white;
+        background-color: #54a4b4;
+        border-radius: 10px;
+        padding: 5px;
+        text-shadow: none;
+        cursor: pointer;
+      }
+      span:hover {
+        background-color: #ef961c;
+      }
+    }
+  }
+  .spinner {
+    $color1: #C9E1F2;
+    $color2: #F4A614;
+    $color3: #54A4B4;
+    .loader {
+      width: 150px;
+      height: 150px;
+    }
+    svg {
+      width: 50%;
+      fill: none;
+    }
+
+    .load {
+      transform-origin: 50% 50%;
+      stroke-dasharray: 570;
+      stroke-width: 20px;
+      &.one {
+        stroke: $color3;
+        animation: load 1.5s infinite;
+      }
+      &.two {
+        stroke: $color2;
+        animation: load 1.5s infinite;
+        animation-delay: 0.1s;
+      }
+      &.three {
+        stroke: $color1;
+        animation: load 1.5s infinite;
+        animation-delay: 0.2s;
+      }
+    }
+
+    .point {
+      animation: bounce 1s infinite ease-in-out;
+      &.one {
+        fill: $color1;
+        animation-delay: 0s;
+      }
+      &.two {
+        fill: $color2;
+        animation-delay: 0.1s;
+      }
+      &.three {
+        fill: $color3;
+        animation-delay: 0.2s;
+      }
+    }
+
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    @keyframes load {
+      0% {
+        stroke-dashoffset: 570;
+      }
+      50% {
+        stroke-dashoffset: 530;
+      }
+      100% {
+        stroke-dashoffset: 570;
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+#footer {
+  color: white;
+  background-color: hsla(205, 32%, 59%, 0.8);
+  font-size: 1.25rem;
+  height: 100px;
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.52);
+  z-index: 1;
+  border-top-right-radius: 35px;
+  border-top-left-radius: 35px;
+  .fondo {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 200px;
+    }
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+    margin-right: 5px;
+  }
+  .faded {
+    opacity: 50%;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #footer {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #footer {
+    font-size: 1.25rem;
+    height: 500px;
+  }
+}

@@ -1,0 +1,28 @@
+.adminAllGreenhouses{
+  .card{
+    background-color: rgba(255, 255, 255, 0.53) !important;
+    box-shadow: 0 0 10px grey;
+  }
+}
+.adminAllGreenhouses::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../public/images/invernadero.jpg");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.adminAllGreenhouses::after {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.323);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+// <a href="https://www.freepik.es/foto-gratis/produccion-cultivo-flores-muchas-flores-crisantemo-invernadero-plantacion-crisantemo_11176227.htm?query=greenhouse">Imagen de ArthurHidden</a> en Freepik

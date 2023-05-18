@@ -1,0 +1,59 @@
+.contenedorAzul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.adminProfile {
+  h1 {
+    align-self: normal !important;
+    span {
+      font-size: 50px !important;
+      font-family: "BarlowExtraBold";
+      color: #ef961c;
+      text-shadow: 1px 1px 3px rgb(26, 26, 26);
+    }
+  }
+}
+
+.cajaAzul {
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 55px;
+  color: white;
+  text-shadow: 3px 3px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  drop-shadow {
+    filter: drop-shadow(6px 6px 8px blue);
+  }
+  background-image: url("../../../public/images/farmers.jpg");
+  //Imagen de aleksandarlittlewolf en Freepik
+  background-position: center;
+  background-size: cover;
+  padding: 50px 0px;
+  text-align: center;
+  border-radius: 25px;
+  gap: 10px;
+  box-shadow: 3px 3px 5px black;
+}
+.caja2 {
+  background-image: url("../../../public/images/adminProduct.jpg");
+  background-position-y: 70%;
+  background-size: cover;
+  //Imagen de prostooleh</a> en Freepik
+}
+.caja3 {
+  background-image: url("../../../public/images/adminGreenhouse.jpg");
+  background-position-y: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  //Imagen de jcomp en Freepik
+}
+
+.cajaAzul:hover {
+  filter: contrast(1.1);
+  box-shadow: inset 0px 0px 10px white, inset 0px 0px 50px black,
+    3px 3px 5px black;
+}

@@ -1,0 +1,19 @@
+.confirmation::before{
+    // background-color: RGB(94,221,96) !important;
+    filter: opacity(0.5);
+    z-index: -2;
+}
+.confirmation::after {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../public/images/si.png") !important;
+    background-position: center;
+    background-size: 30% !important;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+// <a href="https://www.flaticon.es/iconos-gratis/si" title="si iconos">Si iconos creados por juicy_fish - Flaticon</a>

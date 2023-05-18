@@ -1,0 +1,14 @@
+.modalEditOneProduct {
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+  .delete {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+  .contenedorFoto {
+    padding-bottom: 10px;
+  }
+}

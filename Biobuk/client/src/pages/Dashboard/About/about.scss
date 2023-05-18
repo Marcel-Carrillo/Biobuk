@@ -1,0 +1,142 @@
+.about {
+  overflow: hidden;
+  .logo {
+    width: 50px;
+    animation: aparecerArriba 3s;
+  }
+  h1 {
+    font-size: 75px;
+    font-weight: bold;
+    letter-spacing: -7px;
+    z-index: 1;
+  }
+  .letraJunta {
+    animation: aparecerLateral 2s;
+  }
+  .orange {
+    color: orange;
+  }
+  .huerto {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 380px;
+    }
+  }
+  .headerAbout {
+    height: 450px;
+  }
+
+  .bannerPhoto {
+    width: 100%;
+    height: 40vh;
+    margin-top: 24vh;
+    h1 {
+      color: #9fb23c;
+      font-size: 7vw;
+    }
+    p {
+      font-size: 1.5rem;
+      width: 70%;
+    }
+  }
+  .bannerPhoto::before {
+    content: "";
+    background-image: url("../../../../public/bannerAbout.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 25px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+  .bannerPhoto::after {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      white 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+    border-radius: 25px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 100%;
+    z-index: -1;
+  }
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 7.5vw;
+      letter-spacing: -5px;
+    }
+    .huerto {
+      img {
+        height: 37vw;
+      }
+    }
+    .headerAbout {
+      height: 48vh;
+    }
+    
+    p {
+      font-size: 20px;
+      width: 100% !important;
+      text-align: justify;
+      padding: 15px;
+    }
+  }
+  @media (max-width: 765px) {
+    .headerAbout {
+      height: 85vh;
+    }
+    h1 {
+      text-align: center;
+      font-size: 9vw;
+    }
+    .huerto {
+      img {
+        height: 300px;
+      }
+    }
+  }
+  @media (max-width: 465px) {
+    h1 {
+      font-size: 50px;
+    }
+    .bannerPhoto {
+      height: 60vh;
+      h1 {
+        font-size: 50px;
+      }
+    }
+  }
+}
+.nav {
+  --bs-nav-link-color: orange;
+  --bs-nav-link-hover-color: orange;
+  --bs-nav-link-filter: invert(100%);
+}
+@keyframes aparecerArriba {
+  from {
+    transform: translateY(1500px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes aparecerLateral {
+  from {
+    transform: translateX(1000px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}

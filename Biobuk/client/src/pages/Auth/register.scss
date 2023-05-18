@@ -1,0 +1,80 @@
+.register-user {
+  font-size: 1.4rem;
+  .primeraCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-fix {
+    width: fit-content;
+    height: fit-content;
+  }
+  .cpal {
+    padding: 30px !important;
+    border-radius: 30px;
+    width: 50vw;
+    border: 5px solid #f4a614;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  .blurTodo {
+    filter: blur(4px);
+  }
+  .formulario {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .mensajeError {
+    color: red;
+  }
+
+  @media (max-width: 391px) {
+    .boton {
+      width: 50%;
+    }
+    .cpal {
+      min-width: 90vw;
+    }
+  }
+  .confirmacionCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .confirmacion {
+    border: 5px solid #f4a614;
+text-align: center;
+    background-color: rgba(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px;
+    position: fixed;
+    top:45vh;
+    min-width: 50%;
+    max-width: 80%;
+    z-index: 2;
+  }
+}
+.register-user::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../public/images/background.jpg");
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.oscuro::after{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
